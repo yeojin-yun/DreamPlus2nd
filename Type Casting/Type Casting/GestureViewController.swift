@@ -8,6 +8,8 @@
 import UIKit
 
 class GestureViewController: UIViewController {
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
