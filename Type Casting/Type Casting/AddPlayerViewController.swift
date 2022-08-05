@@ -29,12 +29,13 @@ class AddPlayerViewController: UIViewController {
         title = "Add Player"
         
         tableView.register(AddPlayerTextFieldTableViewCell.self, forCellReuseIdentifier: AddPlayerTextFieldTableViewCell.identifier)
-        
+        print(#function)
         navigationItem.leftBarButtonItem = cancelBarButtonItem
         navigationItem.rightBarButtonItem = doneBarButtonItem
     }
     
     @objc func barButtonItemTapped(_ sender: UIBarButtonItem) {
+        print(#function)
         // lazy var를 이용해야 함
         // 함수가 불릴 때 버튼은 생성되지 않음
         switch sender {

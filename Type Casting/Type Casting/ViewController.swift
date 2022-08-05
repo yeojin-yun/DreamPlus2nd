@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @objc func barButtonTapped(_ sender: UIBarButtonItem) {
-        print(#function)
+//        print(#function)
         let detailVC = UINavigationController(rootViewController: AddPlayerViewController())
         present(detailVC, animated: true)
     }
