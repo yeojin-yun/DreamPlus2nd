@@ -7,39 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C9E17C5289A8EE9009C9945 /* AddPlayerTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E17C4289A8EE9009C9945 /* AddPlayerTextFieldTableViewCell.swift */; };
-		0C9E17E728A12534009C9945 /* GameSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E17E628A12534009C9945 /* GameSelectionViewController.swift */; };
-		0C9E17E928A12F0E009C9945 /* LeftGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E17E828A12F0E009C9945 /* LeftGestureViewController.swift */; };
-		0C9E17EB28A12F14009C9945 /* RightGestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E17EA28A12F14009C9945 /* RightGestureViewController.swift */; };
-		0CBF5D0C2897D0510092AC40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF5D0B2897D0510092AC40 /* AppDelegate.swift */; };
-		0CBF5D0E2897D0510092AC40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF5D0D2897D0510092AC40 /* SceneDelegate.swift */; };
-		0CBF5D102897D0510092AC40 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF5D0F2897D0510092AC40 /* ViewController.swift */; };
-		0CBF5D152897D0520092AC40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBF5D142897D0520092AC40 /* Assets.xcassets */; };
-		0CBF5D182897D0520092AC40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBF5D162897D0520092AC40 /* LaunchScreen.storyboard */; };
-		0CBF5D202897D96F0092AC40 /* GestureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF5D1F2897D96F0092AC40 /* GestureViewController.swift */; };
-		0CBF5D222897E5C90092AC40 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF5D212897E5C90092AC40 /* CustomTableViewCell.swift */; };
-		0CBF5D242897EFFF0092AC40 /* AddPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBF5D232897EFFF0092AC40 /* AddPlayerViewController.swift */; };
+		0C9E17D328A10B31009C9945 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E17D228A10B31009C9945 /* AppDelegate.swift */; };
+		0C9E17D728A10B31009C9945 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9E17D628A10B31009C9945 /* ViewController.swift */; };
+		0C9E17DC28A10B32009C9945 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C9E17DB28A10B32009C9945 /* Assets.xcassets */; };
+		0C9E17DF28A10B32009C9945 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C9E17DD28A10B32009C9945 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0C9E17C4289A8EE9009C9945 /* AddPlayerTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerTextFieldTableViewCell.swift; sourceTree = "<group>"; };
-		0C9E17E628A12534009C9945 /* GameSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectionViewController.swift; sourceTree = "<group>"; };
-		0C9E17E828A12F0E009C9945 /* LeftGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftGestureViewController.swift; sourceTree = "<group>"; };
-		0C9E17EA28A12F14009C9945 /* RightGestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightGestureViewController.swift; sourceTree = "<group>"; };
-		0CBF5D082897D0510092AC40 /* Type Casting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Type Casting.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CBF5D0B2897D0510092AC40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CBF5D0D2897D0510092AC40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0CBF5D0F2897D0510092AC40 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0CBF5D142897D0520092AC40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0CBF5D172897D0520092AC40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0CBF5D192897D0520092AC40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CBF5D1F2897D96F0092AC40 /* GestureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureViewController.swift; sourceTree = "<group>"; };
-		0CBF5D212897E5C90092AC40 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
-		0CBF5D232897EFFF0092AC40 /* AddPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlayerViewController.swift; sourceTree = "<group>"; };
+		0C9E17CF28A10B31009C9945 /* AutoLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C9E17D228A10B31009C9945 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C9E17D628A10B31009C9945 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0C9E17DB28A10B32009C9945 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0C9E17DE28A10B32009C9945 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C9E17E028A10B32009C9945 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0CBF5D052897D0510092AC40 /* Frameworks */ = {
+		0C9E17CC28A10B31009C9945 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -49,78 +33,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CBF5CFF2897D0510092AC40 = {
+		0C9E17C628A10B31009C9945 = {
 			isa = PBXGroup;
 			children = (
-				0CBF5D0A2897D0510092AC40 /* Type Casting */,
-				0CBF5D092897D0510092AC40 /* Products */,
+				0C9E17D128A10B31009C9945 /* AutoLayout */,
+				0C9E17D028A10B31009C9945 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0CBF5D092897D0510092AC40 /* Products */ = {
+		0C9E17D028A10B31009C9945 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CBF5D082897D0510092AC40 /* Type Casting.app */,
+				0C9E17CF28A10B31009C9945 /* AutoLayout.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0CBF5D0A2897D0510092AC40 /* Type Casting */ = {
+		0C9E17D128A10B31009C9945 /* AutoLayout */ = {
 			isa = PBXGroup;
 			children = (
-				0CBF5D0B2897D0510092AC40 /* AppDelegate.swift */,
-				0CBF5D0D2897D0510092AC40 /* SceneDelegate.swift */,
-				0CBF5D0F2897D0510092AC40 /* ViewController.swift */,
-				0CBF5D232897EFFF0092AC40 /* AddPlayerViewController.swift */,
-				0C9E17E628A12534009C9945 /* GameSelectionViewController.swift */,
-				0C9E17E828A12F0E009C9945 /* LeftGestureViewController.swift */,
-				0C9E17EA28A12F14009C9945 /* RightGestureViewController.swift */,
-				0C9E17C4289A8EE9009C9945 /* AddPlayerTextFieldTableViewCell.swift */,
-				0CBF5D212897E5C90092AC40 /* CustomTableViewCell.swift */,
-				0CBF5D1F2897D96F0092AC40 /* GestureViewController.swift */,
-				0CBF5D142897D0520092AC40 /* Assets.xcassets */,
-				0CBF5D162897D0520092AC40 /* LaunchScreen.storyboard */,
-				0CBF5D192897D0520092AC40 /* Info.plist */,
+				0C9E17D228A10B31009C9945 /* AppDelegate.swift */,
+				0C9E17D628A10B31009C9945 /* ViewController.swift */,
+				0C9E17DB28A10B32009C9945 /* Assets.xcassets */,
+				0C9E17DD28A10B32009C9945 /* LaunchScreen.storyboard */,
+				0C9E17E028A10B32009C9945 /* Info.plist */,
 			);
-			path = "Type Casting";
+			path = AutoLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CBF5D072897D0510092AC40 /* Type Casting */ = {
+		0C9E17CE28A10B31009C9945 /* AutoLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CBF5D1C2897D0520092AC40 /* Build configuration list for PBXNativeTarget "Type Casting" */;
+			buildConfigurationList = 0C9E17E328A10B32009C9945 /* Build configuration list for PBXNativeTarget "AutoLayout" */;
 			buildPhases = (
-				0CBF5D042897D0510092AC40 /* Sources */,
-				0CBF5D052897D0510092AC40 /* Frameworks */,
-				0CBF5D062897D0510092AC40 /* Resources */,
+				0C9E17CB28A10B31009C9945 /* Sources */,
+				0C9E17CC28A10B31009C9945 /* Frameworks */,
+				0C9E17CD28A10B31009C9945 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Type Casting";
-			productName = "Type Casting";
-			productReference = 0CBF5D082897D0510092AC40 /* Type Casting.app */;
+			name = AutoLayout;
+			productName = AutoLayout;
+			productReference = 0C9E17CF28A10B31009C9945 /* AutoLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0CBF5D002897D0510092AC40 /* Project object */ = {
+		0C9E17C728A10B31009C9945 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
-					0CBF5D072897D0510092AC40 = {
+					0C9E17CE28A10B31009C9945 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
-			buildConfigurationList = 0CBF5D032897D0510092AC40 /* Build configuration list for PBXProject "Type Casting" */;
+			buildConfigurationList = 0C9E17CA28A10B31009C9945 /* Build configuration list for PBXProject "AutoLayout" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -128,53 +104,45 @@
 				en,
 				Base,
 			);
-			mainGroup = 0CBF5CFF2897D0510092AC40;
-			productRefGroup = 0CBF5D092897D0510092AC40 /* Products */;
+			mainGroup = 0C9E17C628A10B31009C9945;
+			productRefGroup = 0C9E17D028A10B31009C9945 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CBF5D072897D0510092AC40 /* Type Casting */,
+				0C9E17CE28A10B31009C9945 /* AutoLayout */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0CBF5D062897D0510092AC40 /* Resources */ = {
+		0C9E17CD28A10B31009C9945 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBF5D182897D0520092AC40 /* LaunchScreen.storyboard in Resources */,
-				0CBF5D152897D0520092AC40 /* Assets.xcassets in Resources */,
+				0C9E17DF28A10B32009C9945 /* LaunchScreen.storyboard in Resources */,
+				0C9E17DC28A10B32009C9945 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0CBF5D042897D0510092AC40 /* Sources */ = {
+		0C9E17CB28A10B31009C9945 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CBF5D202897D96F0092AC40 /* GestureViewController.swift in Sources */,
-				0C9E17E928A12F0E009C9945 /* LeftGestureViewController.swift in Sources */,
-				0C9E17E728A12534009C9945 /* GameSelectionViewController.swift in Sources */,
-				0CBF5D242897EFFF0092AC40 /* AddPlayerViewController.swift in Sources */,
-				0CBF5D222897E5C90092AC40 /* CustomTableViewCell.swift in Sources */,
-				0CBF5D102897D0510092AC40 /* ViewController.swift in Sources */,
-				0C9E17EB28A12F14009C9945 /* RightGestureViewController.swift in Sources */,
-				0CBF5D0C2897D0510092AC40 /* AppDelegate.swift in Sources */,
-				0CBF5D0E2897D0510092AC40 /* SceneDelegate.swift in Sources */,
-				0C9E17C5289A8EE9009C9945 /* AddPlayerTextFieldTableViewCell.swift in Sources */,
+				0C9E17D728A10B31009C9945 /* ViewController.swift in Sources */,
+				0C9E17D328A10B31009C9945 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0CBF5D162897D0520092AC40 /* LaunchScreen.storyboard */ = {
+		0C9E17DD28A10B32009C9945 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0CBF5D172897D0520092AC40 /* Base */,
+				0C9E17DE28A10B32009C9945 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -182,7 +150,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0CBF5D1A2897D0520092AC40 /* Debug */ = {
+		0C9E17E128A10B32009C9945 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +210,7 @@
 			};
 			name = Debug;
 		};
-		0CBF5D1B2897D0520092AC40 /* Release */ = {
+		0C9E17E228A10B32009C9945 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,7 +264,7 @@
 			};
 			name = Release;
 		};
-		0CBF5D1D2897D0520092AC40 /* Debug */ = {
+		0C9E17E428A10B32009C9945 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -305,7 +273,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y89LJ6BC92;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Type Casting/Info.plist";
+				INFOPLIST_FILE = AutoLayout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -315,7 +283,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yyjyyj333.Type-Casting";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyjyyj333.AutoLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -323,7 +291,7 @@
 			};
 			name = Debug;
 		};
-		0CBF5D1E2897D0520092AC40 /* Release */ = {
+		0C9E17E528A10B32009C9945 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -332,7 +300,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y89LJ6BC92;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Type Casting/Info.plist";
+				INFOPLIST_FILE = AutoLayout/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -342,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yyjyyj333.Type-Casting";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yyjyyj333.AutoLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +321,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CBF5D032897D0510092AC40 /* Build configuration list for PBXProject "Type Casting" */ = {
+		0C9E17CA28A10B31009C9945 /* Build configuration list for PBXProject "AutoLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CBF5D1A2897D0520092AC40 /* Debug */,
-				0CBF5D1B2897D0520092AC40 /* Release */,
+				0C9E17E128A10B32009C9945 /* Debug */,
+				0C9E17E228A10B32009C9945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CBF5D1C2897D0520092AC40 /* Build configuration list for PBXNativeTarget "Type Casting" */ = {
+		0C9E17E328A10B32009C9945 /* Build configuration list for PBXNativeTarget "AutoLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CBF5D1D2897D0520092AC40 /* Debug */,
-				0CBF5D1E2897D0520092AC40 /* Release */,
+				0C9E17E428A10B32009C9945 /* Debug */,
+				0C9E17E528A10B32009C9945 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0CBF5D002897D0510092AC40 /* Project object */;
+	rootObject = 0C9E17C728A10B31009C9945 /* Project object */;
 }

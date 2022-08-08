@@ -14,18 +14,25 @@ class GestureViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let leftGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
+        leftGesture.direction = .left
+        view.addGestureRecognizer(leftGesture)
+        
+        let rightGesture = UISwipeGestureRecognizer(target: self, action: #selector(didSwipe(_:)))
+        rightGesture.direction = .right
+        view.addGestureRecognizer(rightGesture)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @objc func didSwipe(_ sender: UISwipeGestureRecognizer) {
+        var touchLocation = sender.location(in: view)
+        switch sender.direction {
+        case .left:
+            print("left")
+        case .right:
+            print("right")
+        default:
+            break
+        }
     }
-    */
 
 }

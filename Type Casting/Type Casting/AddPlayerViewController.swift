@@ -1,83 +1,98 @@
 //
 //  AddPlayerViewController.swift
-//  Type Casting
+//  RatingApp-Code
 //
-//  Created by 순진이 on 2022/08/01.
+//  Created by Doyoung Song on 8/1/22.
 //
 
 import UIKit
 
 class AddPlayerViewController: UIViewController {
-
-    
-//     let들은 순서가 보장되지 않음
-//     보장하기 위해 lazy var를 사용
-//     let layout = UICollectionViewLayout()
-//    lazy var collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
-    
     
     let tableView = UITableView(frame: .zero, style: .grouped)
     
-    lazy var cancelBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(barButtonItemTapped(_:)))
-    lazy var doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(barButtonItemTapped(_:)))
-    
+    lazy var cancelBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel,
+                                              target: self,
+                                              action: #selector(didTapBarButtonItem(_:)))
+    lazy var doneBarButtonItem = UIBarButtonItem(barButtonSystemItem: .done,
+                                              target: self,
+                                              action: #selector(didTapBarButtonItem(_:)))
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addSubview(tableView)
-        tableView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
-        tableView.dataSource = self
-        title = "Add Player"
-        
-        tableView.register(AddPlayerTextFieldTableViewCell.self, forCellReuseIdentifier: AddPlayerTextFieldTableViewCell.identifier)
-        print(#function)
+        navigationItem.title = "Add Player"
+        cancelBarButtonItem.tag = 0
+        doneBarButtonItem.tag = 1
         navigationItem.leftBarButtonItem = cancelBarButtonItem
         navigationItem.rightBarButtonItem = doneBarButtonItem
+        view.addSubview(tableView)
+        tableView.frame = CGRect(x: 0, y: 0,
+                                 width: view.frame.width, height: view.frame.height)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(AddPlayerTextFieldTableViewCell.self,
+                           forCellReuseIdentifier: AddPlayerTextFieldTableViewCell.identifier)
     }
     
-    @objc func barButtonItemTapped(_ sender: UIBarButtonItem) {
-        print(#function)
-        // lazy var를 이용해야 함
-        // 함수가 불릴 때 버튼은 생성되지 않음
+    @objc
+    func didTapBarButtonItem(_ sender: UIBarButtonItem) {
         switch sender {
         case cancelBarButtonItem:
-            print("cancle")
+            print("Cancel")
         case doneBarButtonItem:
-            print("don")
+            print("Done")
         default:
-            break
+            fatalError()
         }
     }
 }
 
+// MARK: - UITableViewDataSource
 extension AddPlayerViewController: UITableViewDataSource {
+    
+    // Section 의 갯수
     func numberOfSections(in tableView: UITableView) -> Int {
         return 2
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
+    // Section Title
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         if section == 0 {
-            return "PLAYER NAME"
+            return "Player Name"
         }
         return nil
     }
-
+    // Row 의 갯수
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    // 각 Row 의 Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AddPlayerTextFieldTableViewCell.identifier, for: indexPath) as? AddPlayerTextFieldTableViewCell else { fatalError() }
         if indexPath.section == 0 {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddPlayerTextFieldTableViewCell.identifier,
+                                                           for: indexPath) as? AddPlayerTextFieldTableViewCell else {
+                fatalError()
+            }
+            cell.selectionStyle = .none
             return cell
         } else {
-            let basicCell = UITableViewCell()
-            basicCell.textLabel?.text = "Game"
-            basicCell.accessoryType = .disclosureIndicator
-            let label = UILabel.init(frame: CGRect(x:0,y:0,width:100,height:20))
-            label.text = "Detail"
-            basicCell.accessoryView = label
-            return basicCell
+            let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+            var content = cell.defaultContentConfiguration()
+            content.text = "Game"
+            content.secondaryText = "Detail"
+            content.secondaryTextProperties.color = .black
+            content.secondaryTextProperties.font = UIFont.systemFont(ofSize: 14)
+            cell.contentConfiguration = content
+            cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = .none
+            return cell
         }
+    }
+}
+
+extension AddPlayerViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.section == 1 else { return }
+        let nextVC = GameSelectionViewController()
+        navigationController?.pushViewController(nextVC, animated: true)
     }
 }
