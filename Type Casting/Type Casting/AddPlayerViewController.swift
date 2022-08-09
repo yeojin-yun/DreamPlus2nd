@@ -76,10 +76,11 @@ extension AddPlayerViewController: UITableViewDataSource {
             return cell
         } else {
             let cell = UITableViewCell(style: .value1, reuseIdentifier: "cell")
+//            let cell = UITableViewCell()
             var content = cell.defaultContentConfiguration()
             content.text = "Game"
             content.secondaryText = "Detail"
-            content.secondaryTextProperties.color = .black
+//            content.secondaryTextProperties.color = .black
             content.secondaryTextProperties.font = UIFont.systemFont(ofSize: 14)
             cell.contentConfiguration = content
             cell.accessoryType = .disclosureIndicator
