@@ -11,7 +11,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("school food")
+                MenuView(memuImage: "specailmari", menuTitle: "스페셜마리", menuPrice: "7,500")
                     .navigationTitle("School Food")
                     .toolbar {
                         ToolbarItem(placement: .navigationBarLeading) {
@@ -30,16 +30,24 @@ struct ContentView: View {
                             
                         }
                     }
-                MenuView()
+                
             }
         }
     }
 }
 
 struct MenuView: View {
+    var memuImage: String
+    var menuTitle: String
+    var menuPrice: String
+    
     var body: some View {
         HStack {
-            Image(systemName: "specailmari")
+            Image(memuImage)
+            VStack {
+                Text(menuTitle)
+                Text(menuPrice)
+            }
         }
     }
 }
