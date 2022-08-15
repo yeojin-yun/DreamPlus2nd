@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showAlert = false
+    @State private var moneyToPay: String = ""
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -28,13 +31,23 @@ struct ContentView: View {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
                         print("충전")
+                        showAlert.toggle()
                     } label: {
                         Text("충전")
+                    }
+                    .alert("지갑 충전", isPresented: $showAlert) {
+                        TextField("", text: $moneyToPay)
+                        TextField("충전할 금액을 입력하세요", text: $moneyToPay)
+                        SecureField("qq", text: $moneyToPay)
+                        Button("충전") {}
+                    } message: {
+                        Text("얼마를 충전할까요?")
                     }
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button {
                         print("결제")
+                        
                     } label: {
                         Text("결제")
                     }
