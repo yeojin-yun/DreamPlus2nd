@@ -11,18 +11,42 @@ class LoginViewController: UIViewController {
     
     let loginView = LoginView()
     let signInButton = UIButton(type: .system)
+    let errorMessageLabel = UILabel()
+    
+    var username: String? {
+        return loginView.usernameTextField.text
+    }
+    
+    var password: String? {
+        return loginView.passwordTextField.text
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
-
-
 }
 
 extension LoginViewController {
     @objc func signInButtonTapped(_ sender: UIButton) {
+        errorMessageLabel.isHidden = true
+        login()
+    }
+    
+    private func login() {
+        guard let username = username, let password = password else {
+            assertionFailure("Username / password should never be nil")
+            return
+        }
         
+        if username.isEmpty || password.isEmpty {
+            configureView(withMessage: "Username / password should never be blank")
+        }
+    }
+    
+    private func configureView(withMessage message: String) {
+        errorMessageLabel.isHidden = false
+        errorMessageLabel.text = message
     }
 }
 
@@ -38,19 +62,24 @@ extension LoginViewController {
         signInButton.configuration = .filled()
         signInButton.configuration?.imagePadding = 8
         signInButton.setTitle("Sign In", for: .normal)
-        
+        errorMessageLabel.textAlignment = .center
+        errorMessageLabel.textColor = .systemRed
+        errorMessageLabel.numberOfLines = 0
+        errorMessageLabel.text = "Error failure"
+        errorMessageLabel.isHidden = false
     }
+    
     final private func addTarget() {
         signInButton.addTarget(self, action: #selector(signInButtonTapped(_:)), for: .primaryActionTriggered)
     }
-    
 
-    
     final private func setConstraints() {
         loginView.translatesAutoresizingMaskIntoConstraints = false
         signInButton.translatesAutoresizingMaskIntoConstraints = false
+        errorMessageLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(loginView)
         view.addSubview(signInButton)
+        view.addSubview(errorMessageLabel)
         
         NSLayoutConstraint.activate([
             view.centerYAnchor.constraint(equalTo: loginView.centerYAnchor),
@@ -59,7 +88,10 @@ extension LoginViewController {
             
             signInButton.leadingAnchor.constraint(equalTo: loginView.leadingAnchor),
             signInButton.trailingAnchor.constraint(equalTo: loginView.trailingAnchor),
-            signInButton.topAnchor.constraint(equalTo: loginView.bottomAnchor, constant: 15)
+            signInButton.topAnchor.constraint(equalTo: loginView.bottomAnchor, constant: 15),
+            
+            errorMessageLabel.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 20),
+            errorMessageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
     }
 }
