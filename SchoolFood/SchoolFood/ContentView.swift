@@ -36,9 +36,7 @@ struct ContentView: View {
                         Text("충전")
                     }
                     .alert("지갑 충전", isPresented: $showAlert) {
-                        TextField("", text: $moneyToPay)
                         TextField("충전할 금액을 입력하세요", text: $moneyToPay)
-                        SecureField("qq", text: $moneyToPay)
                         Button("충전") {}
                     } message: {
                         Text("얼마를 충전할까요?")
@@ -51,7 +49,6 @@ struct ContentView: View {
                     } label: {
                         Text("결제")
                     }
-                    
                 }
             }
             
