@@ -30,16 +30,19 @@ struct ContentView: View {
                             
                         }
                     }
-                MenuView()
+                MenuView(imageName: "specailmari")
             }
         }
     }
 }
 
 struct MenuView: View {
+    var imageName: String
+    
     var body: some View {
         HStack {
-            Image(systemName: "specailmari")
+            Image(imageName)
+            Lab
         }
     }
 }
