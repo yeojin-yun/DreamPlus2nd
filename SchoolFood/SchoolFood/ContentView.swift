@@ -114,6 +114,7 @@ struct OrderVeiw: View {
             .padding(.top)
             
         }
+        .padding(.bottom)
         .position(x: 280, y: 0)
     }
     
