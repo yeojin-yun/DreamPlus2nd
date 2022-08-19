@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C01508328AE52C900D41DC3 /* OnboardingContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C01508228AE52C900D41DC3 /* OnboardingContainerViewController.swift */; };
 		0C18519F28A27DDA00D32F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C18519E28A27DDA00D32F02 /* AppDelegate.swift */; };
 		0C1851A328A27DDA00D32F02 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1851A228A27DDA00D32F02 /* LoginViewController.swift */; };
 		0C1851A828A27DDC00D32F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1851A728A27DDC00D32F02 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C01508228AE52C900D41DC3 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
 		0C18519B28A27DDA00D32F02 /* Udemy_Bankey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udemy_Bankey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C18519E28A27DDA00D32F02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C1851A228A27DDA00D32F02 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C01507F28AE528800D41DC3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				0C01508228AE52C900D41DC3 /* OnboardingContainerViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		0C18519228A27DDA00D32F02 = {
 			isa = PBXGroup;
 			children = (
@@ -55,9 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				0C18519E28A27DDA00D32F02 /* AppDelegate.swift */,
+				0C01507F28AE528800D41DC3 /* Onboarding */,
 				0C1851B328A280D000D32F02 /* Login */,
 				0C1851B228A2808800D32F02 /* Files */,
-				0C1851B428A280F000D32F02 /* LoginView.swift */,
 			);
 			path = Udemy_Bankey;
 			sourceTree = "<group>";
@@ -75,6 +85,7 @@
 		0C1851B328A280D000D32F02 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				0C1851B428A280F000D32F02 /* LoginView.swift */,
 				0C1851A228A27DDA00D32F02 /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -153,6 +164,7 @@
 				0C1851B528A280F000D32F02 /* LoginView.swift in Sources */,
 				0C1851A328A27DDA00D32F02 /* LoginViewController.swift in Sources */,
 				0C18519F28A27DDA00D32F02 /* AppDelegate.swift in Sources */,
+				0C01508328AE52C900D41DC3 /* OnboardingContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
