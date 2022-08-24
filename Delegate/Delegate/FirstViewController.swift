@@ -19,10 +19,7 @@ class FirstViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
-    
-    
 }
 
 extension FirstViewController: SecondViewControllerDelegate {
@@ -64,7 +61,7 @@ extension FirstViewController {
             button.widthAnchor.constraint(equalToConstant: 100),
             button.heightAnchor.constraint(equalToConstant: 30),
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            
+
         ])
     }
 }
