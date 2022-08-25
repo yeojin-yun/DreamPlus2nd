@@ -64,7 +64,7 @@ extension ViewController {
         stopButton.translatesAutoresizingMaskIntoConstraints = false
         
         // Priority : 0 ~ 1,000 (기본값 1,000 = 제일 높은 값)
-//        redViewTopAnchor?.priority = UILayoutPriority(750) 이렇게 줄 수도 있음
+//
         redViewTopAnchor = redView.topAnchor.constraint(equalTo: view.topAnchor, constant: 80)
         //redViewTopAnchor?.priority = .required // 1,000
         //redViewTopAnchor?.priority = .defaultHigh // 750

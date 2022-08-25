@@ -11,18 +11,51 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let loginViewController = LoginViewController()
+    let onboardingViewController = OnboardingContainerViewController()
+    let dummyViewController = DummyViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = OnboardingContainerViewController()
-        
+        window?.rootViewController = loginViewController
+        loginViewController.delegate = self
+        onboardingViewController.delegate = self
+        dummyViewController.delegate = self
         return true
     }
-
-   
-
-
 }
 
+extension AppDelegate: LoginViewControllerDelegate {
+    func didLogin() {
+//        window?.rootViewController = onboardingViewController
+        setViewController(onboardingViewController, animated: true)
+    }
+}
+
+extension AppDelegate: OnboardingViewControllerDelegate {
+    func didFinishOnboarding() {
+        setViewController(dummyViewController, animated: true)
+    }
+}
+
+extension AppDelegate: LogoutDelegate {
+    func didLogout() {
+        setViewController(loginViewController, animated: true)
+    }
+}
+
+extension AppDelegate {
+    func setViewController(_ vc: UIViewController, animated: Bool) {
+        guard animated, let window = self.window else {
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            return
+        }
+        
+        window.rootViewController = vc
+        window.makeKeyAndVisible()
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: nil, completion: nil)
+    }
+}

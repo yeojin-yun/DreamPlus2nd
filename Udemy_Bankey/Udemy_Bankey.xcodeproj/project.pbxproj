@@ -14,6 +14,7 @@
 		0C1851A828A27DDC00D32F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1851A728A27DDC00D32F02 /* Assets.xcassets */; };
 		0C1851AB28A27DDC00D32F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C1851A928A27DDC00D32F02 /* LaunchScreen.storyboard */; };
 		0C1851B528A280F000D32F02 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1851B428A280F000D32F02 /* LoginView.swift */; };
+		0C3B7F3128B78DDC001D51A6 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3B7F3028B78DDC001D51A6 /* DummyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0C1851AA28A27DDC00D32F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C1851AC28A27DDC00D32F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C1851B428A280F000D32F02 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		0C3B7F3028B78DDC001D51A6 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				0C1851B428A280F000D32F02 /* LoginView.swift */,
 				0C1851A228A27DDA00D32F02 /* LoginViewController.swift */,
+				0C3B7F3028B78DDC001D51A6 /* DummyViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C3B7F3128B78DDC001D51A6 /* DummyViewController.swift in Sources */,
 				0C0150E328B4FBFE00D41DC3 /* OnboardingViewController.swift in Sources */,
 				0C1851B528A280F000D32F02 /* LoginView.swift in Sources */,
 				0C1851A328A27DDA00D32F02 /* LoginViewController.swift in Sources */,
