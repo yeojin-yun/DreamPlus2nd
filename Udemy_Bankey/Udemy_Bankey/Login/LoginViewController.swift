@@ -35,6 +35,11 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         configureUI()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        signInButton.configuration?.showsActivityIndicator = false
+    }
 }
 
 extension LoginViewController {

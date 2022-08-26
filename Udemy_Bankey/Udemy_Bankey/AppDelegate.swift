@@ -30,12 +30,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
 //        window?.rootViewController = onboardingViewController
-        setViewController(onboardingViewController, animated: true)
+        
+        if LocalState.hasOnboarded {
+            setViewController(dummyViewController, animated: true)
+        } else {
+            setViewController(onboardingViewController, animated: true)
+        }
     }
 }
 
 extension AppDelegate: OnboardingViewControllerDelegate {
     func didFinishOnboarding() {
+        LocalState.hasOnboarded = true
         setViewController(dummyViewController, animated: true)
     }
 }
