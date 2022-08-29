@@ -31,8 +31,6 @@ class OnboardingViewController: UIViewController {
         configureUI()
         // Do any additional setup after loading the view.
     }
-
-
 }
 
 //MARK: -UI
