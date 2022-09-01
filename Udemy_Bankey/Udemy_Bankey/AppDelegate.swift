@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = AccountSummaryViewController()
+        window?.rootViewController = OnboardingContainerViewController()
         loginViewController.delegate = self
         onboardingViewController.delegate = self
         dummyViewController.delegate = self
