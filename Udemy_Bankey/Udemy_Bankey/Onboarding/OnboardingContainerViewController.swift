@@ -103,9 +103,7 @@ extension OnboardingContainerViewController {
         doneButton.addTarget(self, action: #selector(doneButtonTapped(_:)), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonTapped(_:)), for: .touchUpInside)
     }
-    
-    
-    
+
     final private func setConstraints() {
         addChild(pageViewController) // 1
         view.addSubview(pageViewController.view) // 2
