@@ -24,6 +24,7 @@ class OnboardingContainerViewController: UIViewController {
     
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        print(#function)
         self.pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         
         let page1 = OnboardingViewController(heroImageName: "delorean", titleText: "Bankey is faster, easier to use, and has a brand new look and feel that will make you feel like you are back in the 80s.")
@@ -47,6 +48,7 @@ class OnboardingContainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(#function)
         configureUI()
     }
 }
@@ -103,9 +105,7 @@ extension OnboardingContainerViewController {
         doneButton.addTarget(self, action: #selector(doneButtonTapped(_:)), for: .touchUpInside)
         backButton.addTarget(self, action: #selector(backButtonTapped(_:)), for: .touchUpInside)
     }
-    
-    
-    
+
     final private func setConstraints() {
         addChild(pageViewController) // 1
         view.addSubview(pageViewController.view) // 2
