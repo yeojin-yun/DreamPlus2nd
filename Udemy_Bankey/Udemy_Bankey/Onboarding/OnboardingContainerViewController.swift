@@ -34,6 +34,8 @@ class OnboardingContainerViewController: UIViewController {
         pages.append(page2)
         pages.append(page3)
         
+        
+        
         currentVC = pages.first!
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
