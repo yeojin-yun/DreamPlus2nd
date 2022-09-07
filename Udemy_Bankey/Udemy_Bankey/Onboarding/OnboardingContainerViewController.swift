@@ -122,7 +122,7 @@ extension OnboardingContainerViewController {
             view.topAnchor.constraint(equalTo: pageViewController.view.topAnchor),
             view.leadingAnchor.constraint(equalTo: pageViewController.view.leadingAnchor),
             view.trailingAnchor.constraint(equalTo: pageViewController.view.trailingAnchor),
-            view.bottomAnchor.constraint(equalTo: pageViewController.view.bottomAnchor),
+            view.bottomAnchor.constraint(equalTo: pageViewController.view.bottomAnchor, constant: -100),
             
             closeButton.topAnchor.constraint(equalToSystemSpacingBelow: view.safeAreaLayoutGuide.topAnchor, multiplier: 2),
             closeButton.leadingAnchor.constraint(equalToSystemSpacingAfter: view.leadingAnchor, multiplier: 2),
