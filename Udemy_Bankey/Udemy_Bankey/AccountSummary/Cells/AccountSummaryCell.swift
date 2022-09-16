@@ -12,12 +12,13 @@ class AccountSummaryCell: UITableViewCell {
     enum AccountType: String {
         case Banking
         case CreditCard
-        case InvestMent
+        case Investment
     }
     
     struct ViewModel {
         let accountType: AccountType
         let accountName: String
+        let balance: Decimal
     }
     
     let viewModel: ViewModel? = nil
@@ -42,7 +43,6 @@ class AccountSummaryCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 extension AccountSummaryCell {
@@ -129,13 +129,19 @@ extension AccountSummaryCell {
 
 extension AccountSummaryCell {
     func configure(with vm: ViewModel) {
+        typeLabel.text = vm.accountType.rawValue
+        nameLabel.text = vm.accountName
+        
         switch vm.accountType {
         case .Banking:
-            break
+            underlineView.backgroundColor = appColor
+            balanceLabel.text = "Current balance"
         case .CreditCard:
-            break
-        case .InvestMent:
-            break
+            underlineView.backgroundColor = .systemOrange
+            balanceLabel.text = "Current balance"
+        case .Investment:
+            underlineView.backgroundColor = .systemPurple
+            balanceLabel.text = "value"
         }
     }
 }
