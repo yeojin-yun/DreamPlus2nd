@@ -34,6 +34,4 @@ extension NetworkError: LocalizedError {
             return "noData 오류입니다."
         }
     }
-    
-    
 }
