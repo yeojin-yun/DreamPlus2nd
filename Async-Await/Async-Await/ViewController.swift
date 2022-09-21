@@ -17,30 +17,62 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setUI()
         setAttributes()
-        //        networkService.getQuote { result in
-        //            switch result {
-        //            case .success(let quote):
-        //                print(quote)
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //        }
-        //
-        //
-        // async함수는 반드시 Task 안에서 써야 함. await 키워드와 함께 -> 그러나 async 함수 안에서 await를 쓸 때는 Task 안 써도 됨
-        //        Task {
-        //            let quote = await networkService.getQuoteWithAsync()
-        //            print(quote)
-        //        }
+        getQuote()
+    }
+    
+//    func getQuote() {
+//        networkService.getQuote { [weak self] result in
+//            switch result {
+//            case .success(let quote):
+//                print(quote)
+//                DispatchQueue.main.async {
+//                    self?.centerLabel.text = quote
+//                }
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        }
+//    }
+    
+//    func getQuote() {
+//
+//        //async함수는 반드시 Task 안에서 써야 함. await 키워드와 함께 -> 그러나 async 함수 안에서 await를 쓸 때는 Task 안 써도 됨
+//        Task {
+//            let quote = await networkService.getQuoteWithAsync()
+//
+//                self.centerLabel.text = quote
+//
+//        }
+//
+//    }
+//    
+//    func getQuotesArray() {
+//        var quoteArray = ""
+//        Task {
+//            let quotes = await networkService.getQuotesArray1()
+//
+//            quotes.forEach { quoteArray += "-\($0)\n" }
+//            self.centerLabel.text = quoteArray
+//        }
+//    }
+    
+//    func getQuotesArray() {
+//        var quoteArray = ""
+//        //async함수는 반드시 Task 안에서 써야 함. await 키워드와 함께 -> 그러나 async 함수 안에서 await를 쓸 때는 Task 안 써도 됨
+//        Task {
+//            let quotes = await networkService.getQuotesArray3()
+//
+//            quotes.forEach { quoteArray += "-\($0)\n" }
+//            self.centerLabel.text = quoteArray
+//        }
+//    }
         
-        
-        //배열로 부를 때
-        //        Task {
-        //            print(await networkService.getQuotesArray(), "0")
-        //        }
-        
+    
+    func getQuote() {
         Task {
-            print(await networkService.continuationGetQuote())
+            let quote = await networkService.continuationGetQuote()
+            self.centerLabel.text = quote
         }
     }
 }
@@ -60,6 +92,8 @@ extension ViewController {
     }
     
     func setAttributes() {
-        centerLabel.textColor = .blue
+        centerLabel.textColor = .black
+        centerLabel.textAlignment = .center
+        centerLabel.numberOfLines = 0
     }
 }

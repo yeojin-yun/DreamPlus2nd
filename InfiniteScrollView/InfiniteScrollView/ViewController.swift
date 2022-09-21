@@ -46,19 +46,23 @@ extension ViewController: UICollectionViewDelegate {
     }
     
     func performInfiniteScroll(scrollView: UIScrollView) {
+        guard colors.count > 1 else { return }
+        
         let currentPage = scrollView.contentOffset.x
         print("🟢currentPage: \(currentPage)")
         let firstPage = cellWidth
+        let fakeFirstPage = cellWidth * CGFloat(colors.count - 2)
         print("firstPage: \(firstPage)")
-        
+        print("fakeFirstPage: \(fakeFirstPage)")
         let lastPage = cellWidth * CGFloat(colors.count - 3)
+        let fakeLastPage: CGFloat = 0
         print("lastPage: \(lastPage)")
-        
-        if scrollView.contentOffset.x == firstPage {
+        print("fakeLastPage: \(fakeLastPage)")
+        if currentPage == fakeFirstPage {
             // 만약 현재 첫 번째 페이지(=red)라면?
-            print("red back")
-        } else if scrollView.contentOffset.x == lastPage {
-            print("yellow back")
+            scrollView.contentOffset.x = firstPage
+        } else if currentPage == fakeLastPage {
+            scrollView.contentOffset.x = lastPage
         }
         
     }
@@ -75,7 +79,9 @@ extension ViewController {
         guard let flowLayout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { fatalError() }
         let width = collectionView.frame.width
         let height = collectionView.frame.height
-        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        let left: CGFloat = colors.count > 1 ? -20 : 0
+        let right: CGFloat = colors.count > 1 ? 20 : 0
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: left, bottom: 0, right: right)
         flowLayout.itemSize = CGSize(width: width, height: height)
         flowLayout.minimumLineSpacing = 0
         flowLayout.minimumInteritemSpacing = 0
@@ -91,6 +97,7 @@ extension ViewController {
         collectionView.delegate = self
         collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         collectionView.isPagingEnabled = true
+        collectionView.showsHorizontalScrollIndicator = false
         view.addSubview(collectionView)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false

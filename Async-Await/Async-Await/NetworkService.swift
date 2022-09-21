@@ -67,34 +67,30 @@ class NetworkService {
         }
     }
     
-    func getQuotes() async -> [String] {
+    func getQuotesArray1() async -> [String] {
         var quotes = [String]()
-        
-        
-        quotes.append(await getQuoteWithAsync())
+
+        for _ in 1...3 {
+            quotes.append(await getQuoteWithAsync())
+        }
         return quotes
-        
-//        for _ in 1..3 {
-//            quotes.append(await getQuoteWithAsync())
-//        }
-//        return quotes
-    }
-    
-    func getQuotesArray() async -> [String] {
-        // 기다리지 않음 -> 순서가 보장되지 않으나 빠름
-        // 리턴될 배열이 꽉차기를 기다릴 뿐
-        async let firstQuote = getQuoteWithAsync()
-        async let secondQuote = getQuoteWithAsync()
-        async let thirdQuote = getQuoteWithAsync()
-        return await [firstQuote, secondQuote, thirdQuote]
     }
     
     func getQuotesArray2() async -> [String] {
+        // 기다리지 않음 -> 순서가 보장되지 않으나 빠름
+        // 리턴될 배열이 꽉차기를 기다릴 뿐
+        async let firstQuote = "1️⃣" + getQuoteWithAsync()
+        async let secondQuote = "2️⃣" + getQuoteWithAsync()
+        async let thirdQuote = "3️⃣" + getQuoteWithAsync()
+        return await [firstQuote, secondQuote, thirdQuote]
+    }
+    
+    func getQuotesArray3() async -> [String] {
         // 무조건 순서대로 진행됨 (순서 보장되지만 시간 소요가 큼)
         // 95번~97번줄의 각 작업이 10초가 걸린다면 이 함수는 무조건 30초가 걸림
-        let firstQuote = await getQuoteWithAsync()
-        let secondQuote = await getQuoteWithAsync()
-        let thirdQuote = await getQuoteWithAsync()
+        let firstQuote = await "1️⃣" + getQuoteWithAsync()
+        let secondQuote = await "2️⃣" + getQuoteWithAsync()
+        let thirdQuote = await "3️⃣" + getQuoteWithAsync()
         return [firstQuote, secondQuote, thirdQuote]
     }
     
