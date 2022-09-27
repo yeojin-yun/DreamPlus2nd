@@ -1,8 +1,8 @@
 //
 //  Stadium.swift
-//  MapView
+//  MapView-Starter
 //
-//  Created by 순진이 on 2022/09/26.
+//  Created by 순진이 on 2022/09/27.
 //
 
 import CoreLocation
@@ -27,12 +27,4 @@ struct Stadium: LocationRepresentable {
     var name: String
     var latitude: CLLocationDegrees
     var longitude: CLLocationDegrees
-}
-
-struct Sample: LocationRepresentable {
-    var name: String
-    var latitude: CLLocationDegrees
-    var longitude: CLLocationDegrees
-    
-    
 }
