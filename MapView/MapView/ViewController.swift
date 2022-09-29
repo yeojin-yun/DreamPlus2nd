@@ -11,9 +11,10 @@ import CoreLocation
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var mapView: MKMapView!
+//    @IBOutlet weak var mapView: MKMapView!
     private let locationManager = CLLocationManager()
-    //private let mapView = MKMapView()
+    private let mapView = MKMapView()
+    private let mapButton = UIButton(type: .system)
     
     // 이 방법도 가능
 //    override func loadView() {
@@ -23,6 +24,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUI()
         requestLocationAuthorization()
         locationManager.delegate = self
         locationManager.startUpdatingLocation() // 지속적인 위치 업데이트
@@ -34,7 +36,7 @@ class ViewController: UIViewController {
         fetchLocationsOnMap(locations: Stadium.stadium)
     }
 
-    @IBAction func buttonTapped(_ sender: UIButton) {
+    @objc func buttonTapped(_ sender: UIButton) {
         print(#function)
         centerLocation(location: Stadium.stadium.last!)
     }
@@ -146,5 +148,27 @@ extension ViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         print(view.annotation?.title) // 사용자가 뭘 클릭했는지 알 수 있음
+    }
+}
+
+extension ViewController {
+    private func setUI() {
+        mapButton.setTitle("Map Button", for: .normal)
+        mapButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+        
+        [mapView, mapButton].forEach {
+            view.addSubview($0)
+            $0.translatesAutoresizingMaskIntoConstraints = false
+        }
+        
+        NSLayoutConstraint.activate([
+            mapView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            mapView.topAnchor.constraint(equalTo: view.topAnchor),
+            mapView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            mapButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            mapButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -60)
+        ])
     }
 }
