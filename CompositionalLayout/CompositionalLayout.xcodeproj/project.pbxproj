@@ -13,6 +13,7 @@
 		0C44139E28E5B3A70005F306 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C44139C28E5B3A70005F306 /* Main.storyboard */; };
 		0C4413A028E5B3A90005F306 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C44139F28E5B3A90005F306 /* Assets.xcassets */; };
 		0C4413A328E5B3A90005F306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C4413A128E5B3A90005F306 /* LaunchScreen.storyboard */; };
+		0CDC070A28E6F4C6001B85E2 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDC070928E6F4C6001B85E2 /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0C44139F28E5B3A90005F306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C4413A228E5B3A90005F306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C4413A428E5B3A90005F306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CDC070928E6F4C6001B85E2 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0C44139628E5B3A70005F306 /* AppDelegate.swift */,
 				0C44139828E5B3A70005F306 /* SceneDelegate.swift */,
 				0C44139A28E5B3A70005F306 /* ViewController.swift */,
+				0CDC070928E6F4C6001B85E2 /* CustomCollectionViewCell.swift */,
 				0C44139C28E5B3A70005F306 /* Main.storyboard */,
 				0C44139F28E5B3A90005F306 /* Assets.xcassets */,
 				0C4413A128E5B3A90005F306 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				0C44139B28E5B3A70005F306 /* ViewController.swift in Sources */,
 				0C44139728E5B3A70005F306 /* AppDelegate.swift in Sources */,
 				0C44139928E5B3A70005F306 /* SceneDelegate.swift in Sources */,
+				0CDC070A28E6F4C6001B85E2 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
