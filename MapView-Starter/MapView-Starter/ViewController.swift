@@ -64,7 +64,7 @@ extension ViewController {
 
 extension ViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        <#code#>
+        print("annotation")
     }
 }
 
