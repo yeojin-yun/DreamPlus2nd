@@ -13,6 +13,7 @@
 		0C49519428DC895500C94D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C49519228DC895500C94D3C /* Main.storyboard */; };
 		0C49519628DC895600C94D3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C49519528DC895600C94D3C /* Assets.xcassets */; };
 		0C49519928DC895600C94D3C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C49519728DC895600C94D3C /* LaunchScreen.storyboard */; };
+		0CC858912902874800659688 /* FileManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CC858902902874800659688 /* FileManagerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0C49519528DC895600C94D3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C49519828DC895600C94D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C49519A28DC895600C94D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0CC858902902874800659688 /* FileManagerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				0C49518C28DC895500C94D3C /* AppDelegate.swift */,
 				0C49518E28DC895500C94D3C /* SceneDelegate.swift */,
 				0C49519028DC895500C94D3C /* ViewController.swift */,
+				0CC858902902874800659688 /* FileManagerViewController.swift */,
 				0C49519228DC895500C94D3C /* Main.storyboard */,
 				0C49519528DC895600C94D3C /* Assets.xcassets */,
 				0C49519728DC895600C94D3C /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CC858912902874800659688 /* FileManagerViewController.swift in Sources */,
 				0C49519128DC895500C94D3C /* ViewController.swift in Sources */,
 				0C49518D28DC895500C94D3C /* AppDelegate.swift in Sources */,
 				0C49518F28DC895500C94D3C /* SceneDelegate.swift in Sources */,

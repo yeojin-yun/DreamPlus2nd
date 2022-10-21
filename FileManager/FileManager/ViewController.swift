@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FileManagerViewController: UIViewController {
+class ViewController: UIViewController {
     
     let fileManager = FileManager.default
 
@@ -44,7 +44,7 @@ class FileManagerViewController: UIViewController {
         }
 }
 
-extension FileManagerViewController {
+extension ViewController {
     
     func save() {
         var isDirectory: ObjCBool = true
@@ -71,7 +71,7 @@ extension FileManagerViewController {
     }
 }
 
-extension FileManagerViewController {
+extension ViewController {
     
     func getDocumentDirectoryPath() -> URL {
         let documentDirectoryPath = fileManager.urls(for: .documentDirectory, in: .userDomainMask).first!
