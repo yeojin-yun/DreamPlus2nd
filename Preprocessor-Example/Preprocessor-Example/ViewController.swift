@@ -18,25 +18,35 @@ class ViewController: UIViewController {
 //        #if DEBUG
 //        print("Debug: Debug 모드에서만 보임")
 //        #else
-//        print("")
+//        print("Release: Release 모드에서만 보임")
 //        #endif
         
-    // 모드마다 변수를 설정할 수도 있음
-    #if TEST
-        server = "Server Test"
-    #elseif DEBUG
-        server = "Debug Server"
-    #elseif QA
-        server = "QA Server"
-    #else
-        server = "Relese Server"
-    #endif
+//    // 모드마다 변수를 설정할 수도 있음
+//    #if TEST
+//        server = "Server Test"
+//    #elseif DEBUG
+//        server = "Debug Server"
+//    #elseif QA
+//        server = "QA Server"
+//    #else
+//        server = "Relese Server"
+//    #endif
+//
+//
+//
+//
+//        print(server)
+//
         
-
-        
+            #if DEBUG
+                server = "Debug Server"
+            #elseif QA
+                server = "QA Server"
+            #else
+                server = "Relese Server"
+            #endif
         
         print(server)
-        
     }
     
     
