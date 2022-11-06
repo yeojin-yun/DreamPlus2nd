@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         setUI()
     }
     
+    
+    
     func setUI() {
         redView.backgroundColor = .red
         greenView.backgroundColor = .green
