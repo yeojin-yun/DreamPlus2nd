@@ -42,7 +42,7 @@ extension ViewController {
 //        APIService().getQuote { result in
 //            switch result {
 //            case .success(let quote):
-////                self.label.text = quote.content
+//                self.label.text = quote.content
 //                self.content.send(quote.content) //신호를 보냄
 //            case .failure(let error):
 //                self.label.text = error.localizedDescription
