@@ -15,48 +15,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let loginViewController = LoginViewController()
     let onboardingViewController = OnboardingContainerViewController()
-    let dummyViewController = DummyViewController()
     let mainViewController = MainViewController()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         window?.backgroundColor = .systemBackground
-        window?.rootViewController = MainViewController()
+        
         loginViewController.delegate = self
         onboardingViewController.delegate = self
-        dummyViewController.delegate = self
+        
+        displayLogin()
         return true
+    }
+    
+    private func displayLogin() {
+        setRootViewController(loginViewController)
+    }
+    
+    private func displayNextScreen() {
+        if LocalState.hasOnboarded {
+            prepMainView()
+            setRootViewController(mainViewController)
+        } else {
+            setRootViewController(onboardingViewController)
+        }
+    }
+    
+    private func prepMainView() {
+        mainViewController.setStatusBar()
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().backgroundColor = appColor
     }
 }
 
 extension AppDelegate: LoginViewControllerDelegate {
     func didLogin() {
-//        window?.rootViewController = onboardingViewController
-        
-        if LocalState.hasOnboarded {
-            setViewController(dummyViewController, animated: true)
-        } else {
-            setViewController(onboardingViewController, animated: true)
-        }
+        displayNextScreen()
     }
 }
 
 extension AppDelegate: OnboardingViewControllerDelegate {
     func didFinishOnboarding() {
         LocalState.hasOnboarded = true
-        setViewController(dummyViewController, animated: true)
+        prepMainView()
+        setRootViewController(mainViewController, animated: true)
     }
 }
 
 extension AppDelegate: LogoutDelegate {
     func didLogout() {
-        setViewController(loginViewController, animated: true)
+        setRootViewController(loginViewController, animated: true)
     }
 }
 
 extension AppDelegate {
-    func setViewController(_ vc: UIViewController, animated: Bool) {
+    func setRootViewController(_ vc: UIViewController, animated: Bool = true) {
         guard animated, let window = self.window else {
             self.window?.rootViewController = vc
             self.window?.makeKeyAndVisible()
