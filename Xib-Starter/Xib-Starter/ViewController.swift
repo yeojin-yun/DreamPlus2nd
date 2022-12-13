@@ -22,7 +22,7 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        instantiateStoryboard(type: .home)
+//        instantiateStoryboard(type: .home)
     }
     
     enum Storyboard: String {

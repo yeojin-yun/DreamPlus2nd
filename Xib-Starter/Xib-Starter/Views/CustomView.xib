@@ -15,8 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="131" y="-11"/>
+            <point key="canvasLocation" x="130.53435114503816" y="-226.7605633802817"/>
         </view>
     </objects>
     <resources>
