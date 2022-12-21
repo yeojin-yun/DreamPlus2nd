@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CBB14E929534F4500F975F1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBB14E829534F4500F975F1 /* SecondViewController.swift */; };
 		0CDA5C6C29472F3600D3479E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5C6B29472F3600D3479E /* AppDelegate.swift */; };
 		0CDA5C6E29472F3600D3479E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5C6D29472F3600D3479E /* SceneDelegate.swift */; };
 		0CDA5C7029472F3600D3479E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5C6F29472F3600D3479E /* ViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CBB14E829534F4500F975F1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0CDA5C6829472F3600D3479E /* Xib-Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xib-Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDA5C6B29472F3600D3479E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CDA5C6D29472F3600D3479E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		0CDA5C842947380500D3479E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0CBB14E829534F4500F975F1 /* SecondViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				0CDA5C882947383500D3479E /* CustomTableViewCell.swift in Sources */,
 				0CDA5C6C29472F3600D3479E /* AppDelegate.swift in Sources */,
 				0CDA5C8B29473DDB00D3479E /* CustomView.swift in Sources */,
+				0CBB14E929534F4500F975F1 /* SecondViewController.swift in Sources */,
 				0CDA5C6E29472F3600D3479E /* SceneDelegate.swift in Sources */,
 				0CDA5C82294733BF00D3479E /* HomeViewController.swift in Sources */,
 			);
