@@ -1,0 +1,18 @@
+//
+//  SecondViewController.swift
+//  Xib-Starter
+//
+//  Created by 순진이 on 2022/12/12.
+//
+import UIKit
+
+class SecondViewController: UIViewController {
+    
+    static let identifier = String(describing: SecondViewController.self)
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // storyboard와 연결시키기
+        // Do any additional setup after loading the view.
+    }
+}

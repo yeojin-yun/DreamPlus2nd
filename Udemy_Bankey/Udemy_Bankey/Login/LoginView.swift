@@ -47,9 +47,12 @@ extension LoginView {
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         passwordTextField.placeholder = "Password"
         passwordTextField.delegate = self
+        passwordTextField.enablePasswordToggle()
         
         dividerView.translatesAutoresizingMaskIntoConstraints = false
         dividerView.backgroundColor = .secondarySystemFill
+        
+
         
         layer.cornerRadius = 4
         clipsToBounds = true
@@ -69,6 +72,7 @@ extension LoginView {
             
             dividerView.heightAnchor.constraint(equalToConstant: 1)
         ])
+
     }
 }
 

@@ -22,7 +22,21 @@
 		0C3B800628C791DA001D51A6 /* AccountSummaryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3B800528C791DA001D51A6 /* AccountSummaryHeaderView.swift */; };
 		0C3B800828C79205001D51A6 /* AccountSummaryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3B800728C79205001D51A6 /* AccountSummaryHeaderView.xib */; };
 		0C3B803028D0A930001D51A6 /* AccountSummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3B802F28D0A930001D51A6 /* AccountSummaryCell.swift */; };
+		0CDA5BF929225F3500D3479E /* DecimalUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5BF829225F3500D3479E /* DecimalUtils.swift */; };
+		0CDA5BFB29225F6E00D3479E /* CurrencyFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5BFA29225F6E00D3479E /* CurrencyFormatter.swift */; };
+		0CDA5C102923CEE100D3479E /* NSNotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5C0F2923CEE100D3479E /* NSNotificationName.swift */; };
+		0CDA5C122923D28200D3479E /* UITextField+SecureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA5C112923D28200D3479E /* UITextField+SecureToggle.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0CDA5C042922650600D3479E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0C18519328A27DDA00D32F02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0C18519A28A27DDA00D32F02;
+			remoteInfo = Udemy_Bankey;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0C01508228AE52C900D41DC3 /* OnboardingContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingContainerViewController.swift; sourceTree = "<group>"; };
@@ -42,10 +56,22 @@
 		0C3B800528C791DA001D51A6 /* AccountSummaryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryHeaderView.swift; sourceTree = "<group>"; };
 		0C3B800728C79205001D51A6 /* AccountSummaryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AccountSummaryHeaderView.xib; sourceTree = "<group>"; };
 		0C3B802F28D0A930001D51A6 /* AccountSummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSummaryCell.swift; sourceTree = "<group>"; };
+		0CDA5BF829225F3500D3479E /* DecimalUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalUtils.swift; sourceTree = "<group>"; };
+		0CDA5BFA29225F6E00D3479E /* CurrencyFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyFormatter.swift; sourceTree = "<group>"; };
+		0CDA5C002922650600D3479E /* Udemy_BankeyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Udemy_BankeyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CDA5C0F2923CEE100D3479E /* NSNotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationName.swift; sourceTree = "<group>"; };
+		0CDA5C112923D28200D3479E /* UITextField+SecureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+SecureToggle.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0C18519828A27DDA00D32F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0CDA5BFD2922650600D3479E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -68,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0C18519D28A27DDA00D32F02 /* Udemy_Bankey */,
+				0CDA5C012922650600D3479E /* Udemy_BankeyTests */,
 				0C18519C28A27DDA00D32F02 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				0C18519B28A27DDA00D32F02 /* Udemy_Bankey.app */,
+				0CDA5C002922650600D3479E /* Udemy_BankeyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -119,6 +147,10 @@
 			children = (
 				0C3B7F3328B7BD09001D51A6 /* LocalState.swift */,
 				0C3B7F7528BE5563001D51A6 /* UIViewController+Utils.swift */,
+				0CDA5BF829225F3500D3479E /* DecimalUtils.swift */,
+				0CDA5BFA29225F6E00D3479E /* CurrencyFormatter.swift */,
+				0CDA5C0F2923CEE100D3479E /* NSNotificationName.swift */,
+				0CDA5C112923D28200D3479E /* UITextField+SecureToggle.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -150,6 +182,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		0CDA5C012922650600D3479E /* Udemy_BankeyTests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Udemy_BankeyTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +209,24 @@
 			productReference = 0C18519B28A27DDA00D32F02 /* Udemy_Bankey.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0CDA5BFF2922650600D3479E /* Udemy_BankeyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CDA5C062922650600D3479E /* Build configuration list for PBXNativeTarget "Udemy_BankeyTests" */;
+			buildPhases = (
+				0CDA5BFC2922650600D3479E /* Sources */,
+				0CDA5BFD2922650600D3479E /* Frameworks */,
+				0CDA5BFE2922650600D3479E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0CDA5C052922650600D3479E /* PBXTargetDependency */,
+			);
+			name = Udemy_BankeyTests;
+			productName = Udemy_BankeyTests;
+			productReference = 0CDA5C002922650600D3479E /* Udemy_BankeyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -177,11 +234,16 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					0C18519A28A27DDA00D32F02 = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					0CDA5BFF2922650600D3479E = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
+						TestTargetID = 0C18519A28A27DDA00D32F02;
 					};
 				};
 			};
@@ -199,6 +261,7 @@
 			projectRoot = "";
 			targets = (
 				0C18519A28A27DDA00D32F02 /* Udemy_Bankey */,
+				0CDA5BFF2922650600D3479E /* Udemy_BankeyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -214,6 +277,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CDA5BFE2922650600D3479E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -225,7 +295,11 @@
 				0C3B7F3128B78DDC001D51A6 /* DummyViewController.swift in Sources */,
 				0C3B7F3428B7BD09001D51A6 /* LocalState.swift in Sources */,
 				0C3B800628C791DA001D51A6 /* AccountSummaryHeaderView.swift in Sources */,
+				0CDA5C122923D28200D3479E /* UITextField+SecureToggle.swift in Sources */,
 				0C0150E328B4FBFE00D41DC3 /* OnboardingViewController.swift in Sources */,
+				0CDA5BFB29225F6E00D3479E /* CurrencyFormatter.swift in Sources */,
+				0CDA5BF929225F3500D3479E /* DecimalUtils.swift in Sources */,
+				0CDA5C102923CEE100D3479E /* NSNotificationName.swift in Sources */,
 				0C1851B528A280F000D32F02 /* LoginView.swift in Sources */,
 				0C1851A328A27DDA00D32F02 /* LoginViewController.swift in Sources */,
 				0C3B7F7828BE562F001D51A6 /* MainViewController.swift in Sources */,
@@ -236,7 +310,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0CDA5BFC2922650600D3479E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0CDA5C052922650600D3479E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0C18519A28A27DDA00D32F02 /* Udemy_Bankey */;
+			targetProxy = 0CDA5C042922650600D3479E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0C1851A928A27DDC00D32F02 /* LaunchScreen.storyboard */ = {
@@ -418,6 +507,59 @@
 			};
 			name = Release;
 		};
+		0CDA5C072922650600D3479E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y89LJ6BC92;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yyjyyj333.Udemy-BankeyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Udemy_Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Udemy_Bankey";
+			};
+			name = Debug;
+		};
+		0CDA5C082922650600D3479E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y89LJ6BC92;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.yyjyyj333.Udemy-BankeyTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Udemy_Bankey.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Udemy_Bankey";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -435,6 +577,15 @@
 			buildConfigurations = (
 				0C1851B028A27DDC00D32F02 /* Debug */,
 				0C1851B128A27DDC00D32F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0CDA5C062922650600D3479E /* Build configuration list for PBXNativeTarget "Udemy_BankeyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CDA5C072922650600D3479E /* Debug */,
+				0CDA5C082922650600D3479E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
