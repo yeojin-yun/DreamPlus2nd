@@ -16,8 +16,6 @@ class ViewController: UIViewController {
         
         setUI()
     }
-
-
 }
 
 extension ViewController {
@@ -28,6 +26,8 @@ extension ViewController {
     
     private func setAttributes() {
         title = "앨범"
+        albumCollectionView.delegate = self
+        albumCollectionView.dataSource = self
     }
     
     private func setConstraints() {
