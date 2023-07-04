@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CDAEE902A54499A0081143A /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDAEE8F2A54499A0081143A /* AlbumCollectionViewCell.swift */; };
 		0CF82E0A2A52F3830033FAAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF82E092A52F3830033FAAF /* AppDelegate.swift */; };
 		0CF82E0C2A52F3830033FAAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF82E0B2A52F3830033FAAF /* SceneDelegate.swift */; };
 		0CF82E0E2A52F3830033FAAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CF82E0D2A52F3830033FAAF /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0CDAEE8F2A54499A0081143A /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		0CF82E062A52F3830033FAAF /* PhotoPicker_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoPicker_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CF82E092A52F3830033FAAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CF82E0B2A52F3830033FAAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				0CF82E122A52F3840033FAAF /* Assets.xcassets */,
 				0CF82E142A52F3840033FAAF /* LaunchScreen.storyboard */,
 				0CF82E172A52F3840033FAAF /* Info.plist */,
+				0CDAEE8F2A54499A0081143A /* AlbumCollectionViewCell.swift */,
 			);
 			path = PhotoPicker_Example;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CDAEE902A54499A0081143A /* AlbumCollectionViewCell.swift in Sources */,
 				0CF82E0E2A52F3830033FAAF /* ViewController.swift in Sources */,
 				0CF82E0A2A52F3830033FAAF /* AppDelegate.swift in Sources */,
 				0CF82E0C2A52F3830033FAAF /* SceneDelegate.swift in Sources */,
