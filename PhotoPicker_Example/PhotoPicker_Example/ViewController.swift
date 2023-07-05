@@ -48,7 +48,31 @@ extension ViewController {
     }
     
     private func configureCollectionView() {
-        albumCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        albumCollectionView.collectionViewLayout = createLayout()
+    }
+    
+    private func createLayout() -> UICollectionViewCompositionalLayout {
+        UICollectionViewCompositionalLayout { section, environment in
+            let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(60), heightDimension: .estimated(40))
+            let item = NSCollectionLayoutItem(layoutSize: itemSize)
+            
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
+            group.interItemSpacing = NSCollectionLayoutSpacing.fixed(8)
+            
+            let section = NSCollectionLayoutSection(group: group)
+            section.interGroupSpacing = CGFloat(10)
+            section.contentInsets = NSDirectionalEdgeInsets(top: 10, leading: 10, bottom: 10, trailing: 10)
+            
+            let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(100.0))
+            let header = NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: headerFooterSize,
+                elementKind: UICollectionView.elementKindSectionHeader,
+                alignment: .top
+            )
+            
+            return section
+        }
     }
     
     private func setAttributes() {
