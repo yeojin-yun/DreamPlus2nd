@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         setUI()
+        fetchCollection()
+    }
+    
+    func fetchCollection() {
+        let collections = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .any, options: .none)
+        
+        print(collections.count)
     }
 }
 
@@ -24,7 +32,7 @@ extension ViewController {
         setConstraints()
         setAttributes()
         
-        //configureCollectionView()
+        configureCollectionView()
         configureDataSource()
         updateData()
     }
@@ -32,7 +40,7 @@ extension ViewController {
     private func configureDataSource() {
         dataSource = UICollectionViewDiffableDataSource<Section, Item>(collectionView: albumCollectionView, cellProvider: { collectionView, indexPath, item in
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AlbumCollectionViewCell.identifier, for: indexPath) as! AlbumCollectionViewCell
-            cell.title.text = item.title
+//            cell.title.text = item.title
             return cell
         })
     }
@@ -40,7 +48,7 @@ extension ViewController {
     private func updateData() {
         var snapShot = NSDiffableDataSourceSnapshot<Section, Item>()
         let section = Section(title: "Section 1")
-        let items = [Item(id: 1, title: "Item 1", count: 1), Item(id: 2, title: "Item 2", count: 2), Item(id: 3, title: "Item 3", count: 3)]
+        let items = [Item(id: 1, title: "Item 1", count: 1), Item(id: 2, title: "Item 2", count: 2), Item(id: 3, title: "Item 3", count: 3), Item(id: 4, title: "Item 4", count: 4)]
         snapShot.appendSections([section])
         snapShot.appendItems(items, toSection: section)
         
@@ -53,11 +61,15 @@ extension ViewController {
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
         UICollectionViewCompositionalLayout { section, environment in
-            let itemSize = NSCollectionLayoutSize(widthDimension: .estimated(60), heightDimension: .estimated(40))
+            //fractionalWidth, fractionalHeight : 컬렉션뷰의 비례한 크기
+
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension:.fractionalHeight(1.0) )
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 4)
+            //item을 묶은 group 사이즈에 대한 셋팅
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.5), heightDimension: .fractionalHeight(0.3))
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+            
             group.interItemSpacing = NSCollectionLayoutSpacing.fixed(8)
             
             let section = NSCollectionLayoutSection(group: group)
