@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class AlbumCollectionViewCell: UICollectionViewCell {
     static let identifier = String(describing: AlbumCollectionViewCell.self)
@@ -14,11 +15,11 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     let title: UILabel = UILabel()
     let count: UILabel = UILabel()
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        contentView.backgroundColor = .yellow
+
         setUI()
-        setTest()
     }
     
     private func setUI() {
@@ -31,7 +32,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
             imageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             imageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10),
             imageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
-            imageView.heightAnchor.constraint(equalToConstant: 100),
+            imageView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.65),
             
             title.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 10),
             title.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
@@ -42,6 +43,7 @@ class AlbumCollectionViewCell: UICollectionViewCell {
     }
     
     private func setTest() {
+        contentView.backgroundColor = .yellow
         imageView.backgroundColor = .systemPink
         title.text = "최근 앨범"
         count.text = "3,092"
