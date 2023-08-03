@@ -44,7 +44,9 @@ extension PhotosViewController: UICollectionViewDataSource {
 
 extension PhotosViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc = DetailViewController()
+        
+        let image = assets.object(at: indexPath.row).getImageFromAsset(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        let vc = DetailViewController(image: image)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
