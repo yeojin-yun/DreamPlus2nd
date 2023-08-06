@@ -10,6 +10,7 @@ import UIKit
 class DetailViewController: UIViewController {
     
     let image: UIImage
+    var isFavorite: Bool = false
     
     lazy var shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareButtonTapped(_:)))
     lazy var favoriteButton = UIBarButtonItem(image: UIImage(systemName: "heart"), style: .plain, target: self, action: #selector(favoriteButtonTapped(_:)))
@@ -39,8 +40,8 @@ extension DetailViewController {
         print(#function)
     }
     @objc func favoriteButtonTapped(_ sender: UIButton) {
-        print(#function)
-        favoriteButton.image = UIImage(systemName: "heart.fill")
+        isFavorite.toggle()
+        favoriteButton.image = isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
     }
     @objc func infoButtonTapped(_ sender: UIButton) {
         print(#function)
@@ -62,6 +63,7 @@ extension DetailViewController {
     }
     
     private func setConstraints() {
+        view.backgroundColor = .white
         view.addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         
