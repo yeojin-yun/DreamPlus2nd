@@ -13,7 +13,7 @@ class AlbumViewController: UIViewController {
     private let albumCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var dataSource: UICollectionViewDiffableDataSource<Section, Item>!
     private var items: [Item] = []
-    private var albums: [PHAssetCollection] = []
+    var albums: [PHAssetCollection] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -34,6 +34,7 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         print(#function)
         setUI()
+        registerObserver()
     }
     
     func fetchCollection() {

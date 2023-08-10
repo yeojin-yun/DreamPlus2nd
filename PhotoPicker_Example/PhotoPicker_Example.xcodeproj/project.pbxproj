@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C0AA5E52A7A986F003E13AC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C0AA5E42A7A986F003E13AC /* DetailViewController.swift */; };
+		0C244B592A8508B9004D6D88 /* PHPhotoLibraryChangeObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C244B582A8508B9004D6D88 /* PHPhotoLibraryChangeObserver.swift */; };
 		0C6312E32A72B40200D13985 /* PhotoLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6312E22A72B40200D13985 /* PhotoLibrary.swift */; };
 		0C6312E52A77D10000D13985 /* PHAssetCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6312E42A77D10000D13985 /* PHAssetCollection.swift */; };
 		0C6312E72A77D7E400D13985 /* PHAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6312E62A77D7E400D13985 /* PHAsset.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		0C0AA5E42A7A986F003E13AC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0C244B582A8508B9004D6D88 /* PHPhotoLibraryChangeObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHPhotoLibraryChangeObserver.swift; sourceTree = "<group>"; };
 		0C6312E22A72B40200D13985 /* PhotoLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibrary.swift; sourceTree = "<group>"; };
 		0C6312E42A77D10000D13985 /* PHAssetCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAssetCollection.swift; sourceTree = "<group>"; };
 		0C6312E62A77D7E400D13985 /* PHAsset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PHAsset.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				0C6312E82A77E00E00D13985 /* PhotosViewController.swift */,
 				0C6312EA2A77E28900D13985 /* PhotosCollectionViewCell.swift */,
 				0C0AA5E42A7A986F003E13AC /* DetailViewController.swift */,
+				0C244B582A8508B9004D6D88 /* PHPhotoLibraryChangeObserver.swift */,
 			);
 			path = PhotoPicker_Example;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 				0CDAEE902A54499A0081143A /* AlbumCollectionViewCell.swift in Sources */,
 				0C6312E92A77E00E00D13985 /* PhotosViewController.swift in Sources */,
 				0C6312EB2A77E28900D13985 /* PhotosCollectionViewCell.swift in Sources */,
+				0C244B592A8508B9004D6D88 /* PHPhotoLibraryChangeObserver.swift in Sources */,
 				0C6312E72A77D7E400D13985 /* PHAsset.swift in Sources */,
 				0CF82E0E2A52F3830033FAAF /* AlbumViewController.swift in Sources */,
 				0C6312E52A77D10000D13985 /* PHAssetCollection.swift in Sources */,
