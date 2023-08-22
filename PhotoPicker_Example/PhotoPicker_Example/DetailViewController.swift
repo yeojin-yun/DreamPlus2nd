@@ -60,6 +60,7 @@ extension DetailViewController {
     
     private func setAttributes() {
         imageView.contentMode = .scaleAspectFit
+        view.backgroundColor = .white
     }
     
     private func setConstraints() {

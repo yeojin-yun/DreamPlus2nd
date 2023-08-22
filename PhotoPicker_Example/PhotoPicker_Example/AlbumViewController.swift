@@ -17,6 +17,7 @@ class AlbumViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        navigationController?.isToolbarHidden = true
         print(#function)
         PHPhotoLibrary.checkAuthorization { status in
             if status {
@@ -29,7 +30,7 @@ class AlbumViewController: UIViewController {
             }
         }
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         print(#function)
@@ -114,8 +115,7 @@ extension AlbumViewController {
         })
     }
     
-    
-    
+
     private func configureCollectionView() {
         albumCollectionView.collectionViewLayout = createLayout()
         albumCollectionView.delegate = self
@@ -152,6 +152,8 @@ extension AlbumViewController {
     }
     
     private func setAttributes() {
+        view.backgroundColor = .white
+        
         title = "앨범"
     }
     

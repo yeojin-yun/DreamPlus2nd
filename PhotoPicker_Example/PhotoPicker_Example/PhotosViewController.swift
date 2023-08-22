@@ -22,6 +22,11 @@ class PhotosViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isToolbarHidden = true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
@@ -85,5 +90,6 @@ extension PhotosViewController {
     
     private func setAttributes() {
         view.backgroundColor = .white
+        
     }
 }
