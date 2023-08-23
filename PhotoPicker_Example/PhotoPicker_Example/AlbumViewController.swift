@@ -96,6 +96,8 @@ extension AlbumViewController: UICollectionViewDataSource {
     }
 }
 
+
+
 extension AlbumViewController {
     private func setUI() {
         setConstraints()
@@ -153,8 +155,9 @@ extension AlbumViewController {
     
     private func setAttributes() {
         view.backgroundColor = .white
-        
         title = "앨범"
+        
+        
     }
     
     private func setConstraints() {

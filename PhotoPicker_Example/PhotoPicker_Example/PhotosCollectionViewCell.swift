@@ -11,6 +11,8 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     static let identifier = String(describing: AlbumCollectionViewCell.self)
     var imageView: UIImageView = UIImageView()
     
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -21,8 +23,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     }
     
     private func setUI() {
-        contentView.backgroundColor = .red
-//        contentView.layer.masksToBounds = true
+
         imageView.clipsToBounds = true
         setConstraints()
         setAttributes()
@@ -42,8 +43,11 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     
     private func setAttributes() {
         imageView.contentMode = .scaleAspectFill
-        
-        
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image = nil
+        imageView.alpha = 1.0
+    }
 }
