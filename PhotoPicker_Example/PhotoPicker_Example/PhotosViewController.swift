@@ -13,7 +13,7 @@ class PhotosViewController: UIViewController {
     var assets: PHFetchResult<PHAsset>
     private var photoCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var selectMode: Bool = false
-    private var selectedImageArray: [UIImage] = [] {
+    private var selectedImageArray: [String] = [] {
         didSet {
             print(selectedImageArray)
         }
@@ -61,11 +61,17 @@ extension PhotosViewController: UICollectionViewDelegate {
             if let cell = collectionView.cellForItem(at: indexPath) as? PhotosCollectionViewCell {
                 
                 if cell.isSelected {
-                    cell.imageView.alpha = 0.6
-                    selectedImageArray.append(assets.object(at: indexPath.row).getImageFromAsset(size: UIScreen.main.bounds.size))
+                    print("cell selected Mode \(cell.isSelected)")
+                    cell.isSelected = false
+//                    cell.imageView.alpha = 0.0
+//                    print(selectedImageArray.firstIndex(of: assets.object(at: indexPath.row).localIdentifier))
+                    
                 } else {
-                    cell.imageView.alpha = 0.0
-                    selectedImageArray.remove(at: selectedImageArray.firstIndex(of: assets.object(at: indexPath.row).getImageFromAsset(size: UIScreen.main.bounds.size))!)
+                    print("cell selected Mode \(cell.isSelected)")
+                    cell.isSelected = true
+//                    cell.imageView.alpha = 0.6
+//                    selectedImageArray.append(assets.object(at: indexPath.row).localIdentifier)
+                    
                 }
             }
         } else {
