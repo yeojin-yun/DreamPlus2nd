@@ -21,7 +21,7 @@ class AlbumViewController: UIViewController {
         print(#function)
         PHPhotoLibrary.checkAuthorization { status in
             if status {
-                print("true")
+                
                 self.albums.removeAll()
                 self.fetchCollection()
                 
@@ -35,13 +35,13 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         print(#function)
         setUI()
-        registerObserver()
+//        registerObserver()
     }
     
     func fetchCollection() {
         let fetchResultSmart = PHAssetCollection.fetchAssetCollections(with: .smartAlbum, subtype: .any, options: .none)
         let fecthResultAlbum = PHAssetCollection.fetchAssetCollections(with: .album, subtype: .any, options: .none)
-        let total = [fecthResultAlbum, fetchResultSmart].compactMap {
+        let total: [Void] = [fecthResultAlbum, fetchResultSmart].compactMap {
             $0.enumerateObjects { collection, _, _ in
                 if collection.hasAsset() {
                     self.albums.append(collection)

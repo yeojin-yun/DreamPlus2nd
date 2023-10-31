@@ -42,6 +42,7 @@ extension DetailViewController {
     @objc func favoriteButtonTapped(_ sender: UIButton) {
         isFavorite.toggle()
         favoriteButton.image = isFavorite ? UIImage(systemName: "heart.fill") : UIImage(systemName: "heart")
+        
     }
     @objc func infoButtonTapped(_ sender: UIButton) {
         print(#function)

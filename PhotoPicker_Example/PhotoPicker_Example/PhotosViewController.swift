@@ -11,7 +11,7 @@ import Photos
 class PhotosViewController: UIViewController {
     
     var assets: PHFetchResult<PHAsset>
-    private var photoCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+    var photoCollectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
     private var selectMode: Bool = false
     private var selectedImageArray: [String] = [] {
         didSet {
@@ -36,6 +36,7 @@ class PhotosViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
+        registerObserver()
     }
 }
 
@@ -75,6 +76,7 @@ extension PhotosViewController: UICollectionViewDelegate {
                 }
             }
         } else {
+            
             let image = assets.object(at: indexPath.row).getImageFromAsset(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
             let vc = DetailViewController(image: image)
             self.navigationController?.pushViewController(vc, animated: true)
@@ -165,14 +167,14 @@ extension PhotosViewController {
         navigationController?.toolbar.standardAppearance = appearance
         
         var shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareButtonTapped(_:)))
-        var textButton = UIBarButtonItem(title: "항목 선택", style: .done, target: self, action: nil)
-        textButton.isEnabled = false
+        var textButton = UIBarButtonItem(title: "최신순", style: .done, target: self, action: nil)
+        textButton.isEnabled = true
         
         
         var trashButton = UIBarButtonItem(image: UIImage(systemName: "trash"), style: .plain, target: self, action: #selector(trashButtonTapped(_:)))
-        var infoButton = UIBarButtonItem(image: UIImage(systemName: "info.circle"), style: .plain, target: self, action: #selector(infoButtonTapped(_:)))
+        
         
         let flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        self.toolbarItems = [shareButton, flexibleSpace, textButton, flexibleSpace, infoButton, trashButton]
+        self.toolbarItems = [shareButton, flexibleSpace, textButton, flexibleSpace, trashButton]
     }
 }
