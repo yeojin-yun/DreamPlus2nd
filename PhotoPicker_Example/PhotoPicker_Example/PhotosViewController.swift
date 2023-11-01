@@ -77,8 +77,7 @@ extension PhotosViewController: UICollectionViewDelegate {
             }
         } else {
             
-            let image = assets.object(at: indexPath.row).getImageFromAsset(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
-            let vc = DetailViewController(image: image)
+            let vc = DetailViewController(asset: assets.object(at: indexPath.row))
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
@@ -156,6 +155,7 @@ extension PhotosViewController {
     
     private func setAttributes() {
         view.backgroundColor = .white
+        self.photoCollectionView.backgroundColor = .white
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "선택", style: .plain, target: self, action: #selector(selectModeTapped(_:)))
     }
     

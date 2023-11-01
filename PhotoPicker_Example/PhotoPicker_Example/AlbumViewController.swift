@@ -21,10 +21,8 @@ class AlbumViewController: UIViewController {
         print(#function)
         PHPhotoLibrary.checkAuthorization { status in
             if status {
-                
                 self.albums.removeAll()
                 self.fetchCollection()
-                
             } else {
                 print("앨범 페치 X")
             }
@@ -35,7 +33,7 @@ class AlbumViewController: UIViewController {
         super.viewDidLoad()
         print(#function)
         setUI()
-//        registerObserver()
+        registerObserver()
     }
     
     func fetchCollection() {

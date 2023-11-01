@@ -9,21 +9,23 @@ import Photos
 import PhotosUI
 import UIKit
 
-//extension AlbumViewController: PHPhotoLibraryChangeObserver {
-//    func photoLibraryDidChange(_ changeInstance: PHChange) {
-//        print("------Albums Change 감시------")
+extension AlbumViewController: PHPhotoLibraryChangeObserver {
+    func photoLibraryDidChange(_ changeInstance: PHChange) {
+        print("------Albums Change 감시------")
 //        guard let albumChanges = changeInstance.changeDetails(for: self.albums) else {
 //            return
 //        }
 //        print("------Albums 변화있음 \(albumChanges)------")
-//
-//    }
-//
-//    func registerObserver() {
-//        print("------Albums Observer 등록------")
-//        PHPhotoLibrary.shared().register(self)
-//    }
-//}
+        self.albums.compactMap { assetCollection in
+            print(changeInstance.changeDetails(for: assetCollection))
+        }
+    }
+
+    func registerObserver() {
+        print("------Albums Observer 등록------")
+        PHPhotoLibrary.shared().register(self)
+    }
+}
 
 extension PhotosViewController: PHPhotoLibraryChangeObserver {
 //    func photoLibraryDidChange(_ changeInstance: PHChange) {

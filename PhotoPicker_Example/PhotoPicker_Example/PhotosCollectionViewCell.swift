@@ -42,7 +42,7 @@ class PhotosCollectionViewCell: UICollectionViewCell {
     }
     
     private func setAttributes() {
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleAspectFit
     }
     
     override func prepareForReuse() {

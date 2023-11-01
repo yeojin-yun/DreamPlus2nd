@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Photos
 
 class DetailViewController: UIViewController {
     
-    let image: UIImage
+    let asset: PHAsset
     var isFavorite: Bool = false
     
     lazy var shareButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareButtonTapped(_:)))
@@ -19,9 +20,11 @@ class DetailViewController: UIViewController {
     
     var imageView: UIImageView = UIImageView()
     
-    init(image: UIImage) {
-        self.image = image
-        self.imageView.image = image
+    init(asset: PHAsset) {
+        print("iDetailVC - asset 확인 \(asset)")
+        self.asset = asset
+        let image = asset.getImageFromAsset(size: CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height))
+        imageView.image = image
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -37,7 +40,17 @@ class DetailViewController: UIViewController {
 
 extension DetailViewController {
     @objc func shareButtonTapped(_ sender: UIButton) {
-        print(#function)
+        let testPhoto = UIImage(named: "test.png")
+        let activityViewController = UIActivityViewController(activityItems: [testPhoto], applicationActivities: nil)
+        
+        // iPad에서 팝오버 스타일로 표시되도록 설정 (필요한 경우)
+        
+        
+        // 공유 작업 종료 시 동작 설정
+        
+        
+        // UIActivityViewController 표시
+        present(activityViewController, animated: true, completion: nil)
     }
     @objc func favoriteButtonTapped(_ sender: UIButton) {
         isFavorite.toggle()
